@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="rocket" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e30613;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M188.04,253.68c39.86-43.48,142.03-91.3,161.59-82.61s-46.38,126.09-84.78,141.3-81.16,15.94-89.86-6.52,13.04-52.17,13.04-52.17Z"/>
+</svg>

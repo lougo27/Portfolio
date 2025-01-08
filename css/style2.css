@@ -1,0 +1,54 @@
+body {
+    background-color: #EFE8D4;
+    
+}
+
+* {
+    font-family: "League Spartan";
+}
+h1 {
+    font-size: 300%;
+    position: relative;
+    right: 0;
+}
+
+#Menu {
+    display: flex;
+    text-align: end;
+    justify-content: end;
+}
+.menu {
+    font-size: 120%;
+}
+
+
+
+@keyframes dash {
+    from {
+      stroke-dashoffset: 1250;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+#navPath {
+    stroke-dasharray: 1250;
+    stroke-dashoffset: 0;
+    animation-fill-mode: forwards;
+    animation: dash 5s ease-in-out;
+}
+
+#rond {
+    border: solid;
+    border-color: black;
+}
+
+img, #me {
+    width: 50%;
+    clip-path:ellipse(33% 50%);
+}
+
+#photoMoi {
+    
+}
