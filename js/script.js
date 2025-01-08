@@ -34,9 +34,9 @@ for (let i = 0; i < photoProjet.length; i++) {
       document.getElementById('titreModal').innerText = photoProjet[i].titre
       document.getElementById('one').innerText = photoProjet[i].description
       document.getElementById('conclusion').innerText = photoProjet[i].conclusion
-      document.getElementById('image1').src = photoProjet[i].image1
-      document.getElementById('image2').src = photoProjet[i].image2
-      document.getElementById('image3').src = photoProjet[i].image3
+      document.getElementById('image1').src = `assets/images/${photoProjet[i].image1}`
+      document.getElementById('image2').src = `assets/images/${photoProjet[i].image2}`
+      document.getElementById('image3').src = `assets/images/${photoProjet[i].image3}`
     }
 
 
