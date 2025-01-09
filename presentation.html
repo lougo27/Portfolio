@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qui-suis je?</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,6 +44,26 @@
                 
             </svg>      
         </div>
+        <div id="menuMobile">
+            <nav>
+                <div id="ligne">
+                    <img src="assets/images/coquillage.jpg" alt="logo">
+                    <p id="menuCentre">Louane Gouin</p>
+                    <label for="toggle">☰</label>
+                </div>
+                
+                
+                <input type="checkbox" id="toggle">
+                <div class="main_pages">
+                    <a href="./index.html">Accueil</a>
+                    <a href="./presentation.html">Qui suis-je ?</a>
+                    <a href="./projetscolaire.html">Projets scolaire</a>
+                    <a href="./projetperso.html">Projets personnels</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+            </nav> 
+        </div>
+        
 
         <div id="globalQui">
             <div id="Qui">
@@ -54,7 +75,7 @@
                 <div id="contreAbsolute">
                     <div id="gratter">
                         <img src="assets/images/moi.jpg" alt="photo de moi" id="Louane">
-                        <canvas id="carteAgratter" ></canvas>
+                        <canvas id="carteAgratter" width="300px" height="300px"></canvas>
                     </div>
                 </div>
                 
@@ -72,6 +93,8 @@
             
     
 </body>
+
+
 <script src="js/script2.js"></script>
 <script src="js/star_path.js"></script>
 </html>

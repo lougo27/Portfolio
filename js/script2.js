@@ -8,7 +8,7 @@ ctx.fillStyle = "#EE9B00"
 ctx.fillRect(0,0,canvas.width,canvas.height)
 ctx.font = "22px League Spartan"
 ctx.fillStyle ="#CA6702"
-ctx.fillText("Grattez ici !", 100,140)
+ctx.fillText("Grattez ici !", 100,280)
 
 let image = new Image();
 image.src = 'assets/images/Mon_avatar.png'
@@ -57,6 +57,6 @@ function clearCircle(e, isMobile) {
     //ctx.fillStyle = "#000000";
     ctx.globalCompositeOperation = 'destination-out';
     ctx.beginPath();
-    ctx.arc(position.x, position.y / 2, 15, 0, 2*Math.PI);
+    ctx.arc(position.x, position.y, 15, 0, 2*Math.PI);
     ctx.fill();
 }

@@ -13,16 +13,6 @@ h1 {
     right: 0;
 }
 
-#Menu {
-    display: flex;
-    text-align: end;
-    justify-content: end;
-}
-.menu {
-    font-size: 120%;
-}
-
-
 
 @keyframes dash {
     from {
@@ -100,6 +90,4 @@ h1 {
 #interieur {
     display: flex;
     justify-content: space-between; 
-    
-   
 }
