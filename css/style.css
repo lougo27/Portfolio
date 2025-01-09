@@ -365,6 +365,9 @@ nav a:hover {
   nav {
       height: 60px;
   }
+  #menuMobile {
+    display: flex;
+  }
   #Menu {
     display: none;
   }
