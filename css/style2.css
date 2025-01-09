@@ -49,14 +49,56 @@ h1 {
     clip-path:ellipse(33% 50%);
 } */
 
-
-#gratter {
-    display: flex;
-    position: relative;
+#inutile {
+    width: 0px;
+    height: 300px;
 }
+
 #carteAgratter, #Louane{
     width: 300px;
     height: 300px;
     position: absolute;
+    border-radius: 16%;
+    margin-left: 40vw;
+    margin-top: 300px;
 }
 
+
+#gratter {
+    flex: 1; /* Prend l'espace restant disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contreAbsolute {
+    position: relative;
+}
+
+
+#globalQui {
+    position: relative;
+    display: bloc;
+    margin: 0 15%;
+}
+
+#Qui {
+    text-align: center;
+    margin-top: -20%;
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    color: #CA6702;
+    
+}
+
+#texteMoi {
+    width: 20%;
+    justify-content: flex-start;
+}
+
+#interieur {
+    display: flex;
+    justify-content: space-between; 
+    
+   
+}
