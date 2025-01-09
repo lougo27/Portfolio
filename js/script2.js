@@ -41,12 +41,19 @@ canvas.addEventListener('mousemove', function(e) {
 })
 
 window.addEventListener('touchmove', function(e) {
-    clearCircle(e);
+    clearCircle(e, true);
 })
 
-function clearCircle(e) {
+function clearCircle(e, isMobile) {
     console.log(e);
-    const position = getCursorPosition(canvas,e)
+
+    let position;
+    if (isMobile) {
+        const touch = e.targetTouches[0]
+        position = getCursorPosition(canvas,touch)
+    } else {
+        position = getCursorPosition(canvas,e)
+    }
     //ctx.fillStyle = "#000000";
     ctx.globalCompositeOperation = 'destination-out';
     ctx.beginPath();
