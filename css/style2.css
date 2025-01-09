@@ -5,6 +5,7 @@ body {
 
 * {
     font-family: "League Spartan";
+    overscroll-behavior: none;
 }
 h1 {
     font-size: 300%;
