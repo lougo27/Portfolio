@@ -24,11 +24,7 @@ function getCursorPosition(canvas, event) {
     return {x,y}
 }
 
-function mobilecheck() {
-    return (typeof window.orientation !== "undefined") 
-      || (navigator.userAgent.indexOf('IEMobile') !== -1
-      );
-};
+
 
 canvas.addEventListener('mousedown', function(){
     isMousePress = true
@@ -39,13 +35,20 @@ window.addEventListener('mouseup', function(){
 })
 
 canvas.addEventListener('mousemove', function(e) {
-    if (isMousePress || mobilecheck()) {
-        const position = getCursorPosition(canvas,e)
-        //ctx.fillStyle = "#000000";
-        ctx.globalCompositeOperation = 'destination-out';
-        ctx.beginPath();
-        ctx.arc(position.x, position.y / 2, 15, 0, 2*Math.PI);
-        ctx.fill();
+    if (isMousePress) {
+        clearCircle(e)
     }
-    
 })
+
+window.addEventListener('touchmove', function(e) {
+    clearCircle(e);
+})
+
+function clearCircle(e) {
+    const position = getCursorPosition(canvas,e)
+    //ctx.fillStyle = "#000000";
+    ctx.globalCompositeOperation = 'destination-out';
+    ctx.beginPath();
+    ctx.arc(position.x, position.y / 2, 15, 0, 2*Math.PI);
+    ctx.fill();
+}
