@@ -1,7 +1,9 @@
 :root {
-    --imageWidth: 85vw;
-    --imageHeight: 135vw;
+    --imageWidth: 300px;
+    --imageHeight: 450px;
     --imageRadius: 30px;
+    /* --imageWidth: 85vw;
+    --imageHeight: 135vw; */
 }
 
 img {

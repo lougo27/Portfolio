@@ -357,6 +357,10 @@ nav a:hover {
   background: #EE9B00;
 }
 
+#menuMobile {
+  display: none;
+}
+
 @media all and (max-width: 991px) {
   nav {
       height: 60px;
