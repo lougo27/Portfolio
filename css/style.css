@@ -25,6 +25,7 @@ h1 {
     display: flex;
     text-align: end;
     justify-content: end;
+    
 }
 .menu {
     font-size: 120%;
@@ -290,5 +291,113 @@ h1 {
 
 
  
+
+nav {
+  margin: 0 auto;
+  width: 100%;
+  height: 100px;
+  background: #EFE8D4;
+  position: fixed; /* Fixe le menu en haut de la page */
+  top: 0; /* Positionne le menu tout en haut */
+  left: 0; /* Aligne le menu à gauche */
+  right: 0; /* Aligne le menu à droite */
+  z-index: 1000; /* Assure que le menu est au-dessus de tout autre contenu */
+}
+
+#ligne {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  height: 100%;
+}
+
+#ligne img {
+  height: 50px;
+  width: auto;
+}
+
+#menuCentre {
+  font-size: 1.5em;
+  text-align: center;
+  white-space: nowrap;
+  flex: 1;
+  margin: 0;
+}
+
+label {
+  font-size: 2em;
+  color: #CA6702;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+input[type="checkbox"] {
+  display: none; /* Masque la case à cocher */
+}
+
+.main_pages {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main_pages a {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  color: #EFE8D4;
+}
+
+nav a:hover {
+  background: #EE9B00;
+}
+
+@media all and (max-width: 991px) {
+  nav {
+      height: 60px;
+  }
+  #Menu {
+    display: none;
+  }
+  .main_pages {
+      display: none; /* Cache le menu sur les petits écrans */
+      flex-direction: column;
+      background: #CA6702;
+      height: 220px;
+      position: absolute;
+      top: 60px; /* Positionne le menu juste sous la barre de navigation */
+      left: 0;
+      width: 100%;
+      z-index: 10; /* S'assure que le menu soit au-dessus du contenu */
+  }
+
+  .main_pages a {
+      width: 100%;
+  }
+
+  #menuCentre {
+      padding: 0;
+      margin: 0;
+  }
+
+  label {
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      color: #CA6702;
+      cursor: pointer;
+  }
+
+  #toggle:checked + .main_pages {
+      display: flex; /* Affiche le menu quand la case est cochée */
+  }
+}
 
 

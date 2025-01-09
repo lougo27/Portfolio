@@ -1,0 +1,182 @@
+:root {
+    --imageWidth: 85vw;
+    --imageHeight: 135vw;
+    --imageRadius: 30px;
+}
+
+img {
+    width: 30%;
+}
+body {
+    overflow: visible;
+}
+
+#textenul {
+    font-size: 1.5vw;
+}
+#contact h2 {
+    font-size: 4em;
+    margin-bottom: 25px;
+    color: #CA6702;
+}
+
+
+#contact {
+    margin-top: -15%;
+    text-align: center;
+}
+
+#contenuContact {
+    display: flex;
+    gap: 100px;
+    margin: 0 10%;
+    text-align: left;
+}
+
+.flip-card {
+    height: var(--imageHeight);
+    width: var(--imageWidth);
+    min-width: var(--imageWidth);
+    background-color: transparent;
+    perspective: 1000px;
+    margin-bottom: 5%;
+    border-radius: var(--imageRadius);
+}
+
+.flip-card img {
+    width: var(--imageWidth);
+    height: var(--imageHeight);
+    border-radius: var(--imageRadius);
+}
+  
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: var(--imageRadius);
+}
+  
+.flip-card-front {
+    background-color: transparent;
+    color: black;
+}
+  
+.flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.reseaux {
+    display: flex;
+    
+
+}
+
+.iconeR {
+    width: 5vw;
+    margin: 0 0.5vw;
+    
+}
+
+.contenur {
+    margin: 2vw 3vw;
+    text-align: center;
+    width: 80%; /* Adapte selon la largeur visible souhaitée */
+    border-radius: 16px;
+    overflow: hidden; /* Cache le contenu qui dépasse */
+    position: relative;
+    background-color: #CA6702;
+    color: #EFE8D4;
+    font-size: 1.5vw;
+}
+  
+.messagedefilant {
+    display: inline-block;
+    white-space: nowrap; /* Empêche le texte de revenir à la ligne */
+    animation: defilement2 15s infinite linear;
+
+}
+  
+.messagedefilant div {
+    display: inline-block;
+    padding-left: 80%; /* Laisse un espace initial avant que le texte apparaisse */
+}
+  
+  /* Animation pour le défilement */
+@keyframes defilement2 {
+    0% {
+      transform: translateX(18%); /* Le texte commence à l'extérieur à droite */
+    }
+    100% {
+      transform: translateX(-200%); /* Le texte défile vers l'extérieur à gauche */
+    }
+}
+ 
+
+@media (max-width: 768px) {
+    #Menu {
+        display: none
+    }
+    body {
+        padding-top: 60px; /* Si la hauteur du menu est réduite sur mobile */
+    }
+
+
+    /* Adapte les tailles des textes et marges */
+    #textenul {
+      font-size: 3vw; /* Texte plus grand pour les petits écrans */
+    }
+    h2#contactez {
+        padding: 0%;
+        margin: 0%;
+        margin-top: 50%;
+        gap: 50%;
+    }
+    #contact h2 {
+        margin-top: 20%;
+      font-size: 2em; /* Réduit la taille du titre */
+    }
+  
+    #contenuContact {
+      flex-direction: column; /* Change la disposition en colonne */
+      gap: 1px; /* Réduit l'espacement entre les éléments */
+      
+    }
+    #contact {
+        padding: 0;
+    }
+    #contenuContact > div:nth-child(2) {
+        order: 1; /* Place le texte avant la carte */
+    }
+    .flip-card {
+      margin: 0 auto; /* Centre la carte */
+      order: 2;
+    }
+  
+    .messagedefilant {
+      font-size: 3vw; /* Réduit la taille du texte défilant */
+    }
+  
+    .iconeR {
+      width: 10vw; /* Réduit les icônes des réseaux sociaux */
+
+    }
+  }
+  
