@@ -44,11 +44,19 @@ h1 {
     border-color: black;
 }
 
-img, #me {
+/* img, #me {
     width: 50%;
     clip-path:ellipse(33% 50%);
+} */
+
+
+#gratter {
+    display: flex;
+    position: relative;
+}
+#carteAgratter, #Louane{
+    width: 300px;
+    height: 300px;
+    position: absolute;
 }
 
-#photoMoi {
-    
-}
