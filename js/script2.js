@@ -45,6 +45,7 @@ window.addEventListener('touchmove', function(e) {
 })
 
 function clearCircle(e) {
+    console.log(e);
     const position = getCursorPosition(canvas,e)
     //ctx.fillStyle = "#000000";
     ctx.globalCompositeOperation = 'destination-out';
