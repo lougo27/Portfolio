@@ -1,3 +1,20 @@
+/* styles.css */
 body {
-    background-image: url('freepik__retouch__53020.png');
+    margin: 0;
+    height: 200vh; /* La page est deux fois plus haute que l'écran */
+    overflow: visible;
+    overflow-x: hidden; /* Pas de défilement horizontal */
+}
+
+.container {
+    position: fixed; /* La fusée reste visible et fixe */
+    bottom: 0; /* Place la fusée en bas de la page */
+    left: 50%; /* Centre la fusée horizontalement */
+    transform: translateX(-50%); /* Corrige l'alignement horizontal */
+    width: 100px; /* Ajuste la taille de la fusée */
+}
+
+#fusee {
+    width: 100%; /* La fusée occupe tout le conteneur */
+    transition: transform 0.1s ease-out; /* Animation fluide pendant le défilement */
 }

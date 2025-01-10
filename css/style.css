@@ -10,11 +10,14 @@
 body {
     background-color: #EFE8D4;
     overflow: hidden;
+    
 }
 
 * {
     font-family: "League Spartan";
-}
+    user-select: none;
+    -webkit-user-select: none;
+  }
 h1 {
     font-size: 300%;
     position: relative;

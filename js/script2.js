@@ -57,6 +57,6 @@ function clearCircle(e, isMobile) {
     //ctx.fillStyle = "#000000";
     ctx.globalCompositeOperation = 'destination-out';
     ctx.beginPath();
-    ctx.arc(position.x, position.y, 15, 0, 2*Math.PI);
+    ctx.arc(position.x, position.y, 30, 0, 2*Math.PI);
     ctx.fill();
 }
