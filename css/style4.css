@@ -1,5 +1,6 @@
 body{
     overflow: visible;
+    overflow-x: hidden;
 }
 
 
@@ -23,6 +24,37 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+
+@keyframes dashEtoile {
+    from {
+      stroke-dashoffset: 2150;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+}
+.cls-1, .cls-2 {
+    stroke-dasharray: 2150;
+    stroke-dashoffset: 2150; /* Position initiale */
+    animation-fill-mode: forwards;
+    animation: dashEtoile 8s ease-in-out paused;
+    animation-play-state: paused;
+    visibility: hidden; /* Par défaut, caché */
+}
+
+.cases.active .cls-1, .cases.active .cls-2 {
+    visibility: visible; /* Rendre visible uniquement si actif */
+    animation-play-state: running; /* Démarrer l'animation */
+    animation-fill-mode: forwards;
+}
+
+
+#Calque_1 {
+    width: 300px;
+}
+
+
 
 .constel {
     width: 500px;
