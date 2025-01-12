@@ -9,9 +9,27 @@ body{
     height: 300px;
 }
 
+h2{
+    text-align: center;
+    margin-top: -20%;
+    font-size: 3em;
+    margin-bottom: 25px;
+    color: #CA6702;
+}
+#decalage {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
 #toutesCases{
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     justify-content: space-between;
+    
 }
 
 .boutons{
