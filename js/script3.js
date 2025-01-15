@@ -1,19 +1,17 @@
 // script.js
-document.addEventListener("DOMContentLoaded", () => {
-    // Place la page en bas au chargement
-    setTimeout(() => {
-        window.scrollTo(0, document.body.scrollHeight);
-    }, 0); // Un léger délai pour être sûr que tout est chargé
+window.onload = () => {
+    // Scroll to bottom when the page loads
+    window.scrollTo(0, document.body.scrollHeight);
+};
 
-    const fusee = document.getElementById("fusee");
+window.onscroll = () => {
+    const rocket = document.getElementById("rocket");
+    const scrollPosition = window.scrollY;
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
 
-    // Écoute l'événement de défilement
-    window.addEventListener("scroll", () => {
-        const maxScroll = document.body.scrollHeight - window.innerHeight; // Calcul de la hauteur totale de défilement
-        const currentScroll = window.scrollY; // Position actuelle du scroll
-        const scrollRatio = currentScroll / maxScroll; // Ratio entre 0 (bas) et 1 (haut)
+    // Calculate the new position of the rocket
+    const rocketOffset = (scrollPosition / maxScroll) * 100;
 
-        // Déplace la fusée en fonction du ratio de défilement
-        fusee.style.transform = `translateY(-${scrollRatio * 100}vh)`;
-    });
-});
+    // Update the rocket's position
+    rocket.style.transform = `translateX(-50%) translateY(${rocketOffset}px)`;
+};
