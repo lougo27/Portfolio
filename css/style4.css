@@ -124,14 +124,14 @@ h2 {
 
 @media (min-width: 1980px) {
     :root {
-        --tailleConstellation: 40rem;
+        --tailleConstellation: 35rem;
     }
 
     
     #titrePage {
         font-size: 4rem;
         margin-bottom: 0%;
-        margin-top: -20%;
+        margin-top: -40%;
     }
     #teaser {
         font-size: 2rem;
