@@ -120,7 +120,7 @@ h2 {
 
 @media (min-width: 1980px) {
     #decalage {
-        margin-top: -20%;
+        
     }
     #titrePage {
         font-size: 4rem;
@@ -128,7 +128,7 @@ h2 {
     }
     #teaser {
         font-size: 2rem;
-        margin-top: -4%;
+        margin-top: -10%;
     }
 
 }
