@@ -131,7 +131,15 @@ body {
     }
 }
  
+@media (min-width: 1990px) {
+    :root {
+        --imageWidth: 25rem;
+        --imageHeight: 35rem;
+        --imageRadius: 30px;
+    
+    }
 
+}
 @media (max-width: 768px) {
     #Menu {
         display: none
