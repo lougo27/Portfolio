@@ -9,6 +9,7 @@
 
 body {
     overflow: visible;
+    overflow-x: hidden;
 }
 
 #textenul {
@@ -139,7 +140,7 @@ body {
     
     }
     .flip-card {
-        margin-top: 2%;
+        margin-top: 1%;
     }
 
 }
