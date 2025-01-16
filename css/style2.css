@@ -66,10 +66,10 @@ body {
 .boutons{
     background-color: #CA6702;
     color: #EFE8D4;
-    border-radius: 16px;
+    border-radius: 20px;
     border: none;
-    width: 8rem;
-    height: 2rem;
+    width: 9rem;
+    height: 3rem;
     font-size: 1rem;
 }
 
@@ -91,6 +91,9 @@ body {
         margin-left: 30vw;
         margin-top: 40vw;
         overscroll-behavior: none;
+    }
+    .boutons{
+        font-size: 4rem;
     }
 }
 

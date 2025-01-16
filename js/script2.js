@@ -89,9 +89,9 @@ window.addEventListener('resize', function () {
 function initializeCanvas() {
     ctx.fillStyle = "#EE9B00";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.font = "22px League Spartan";
+    ctx.font = "2rem League Spartan";
     ctx.fillStyle = "#CA6702";
-    ctx.fillText("Grattez ici !", 100, 280);
+    ctx.fillText("Grattez ici !", canvas.width/4, canvas.height-22);
 
     // Charger l'image de fond
     image.onload = function () {
