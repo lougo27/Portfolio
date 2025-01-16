@@ -1,3 +1,7 @@
+:root {
+    --tailleConstellation: 20rem;
+}
+
 body {
     overflow: visible;
     overflow-x: hidden;
@@ -52,7 +56,7 @@ h2 {
     
     border-radius: 10px;
     padding: 15px;
-    width: 20rem;
+    width: var(--tailleConstellation);
     text-align: center;
     
 }
@@ -119,8 +123,12 @@ h2 {
 }
 
 @media (min-width: 1980px) {
+    :root {
+        --tailleConstellation: 40rem;
+    }
+
     #decalage {
-        
+        margin-top: -20%;
     }
     #titrePage {
         font-size: 4rem;
@@ -128,7 +136,7 @@ h2 {
     }
     #teaser {
         font-size: 2rem;
-        margin-top: -10%;
+        margin-top: -4%;
     }
 
 }
