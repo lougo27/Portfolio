@@ -83,17 +83,18 @@ body {
         --carteWidth: 30rem;  /* beugue lorsque je change */
         --carteHeight: 30rem;
         --carteRadius: 16%;
+        font-family: "League Spartan";
     }
     #gratter {
         width: 200%;
     }
     #carteAgratter, #Louane{
         margin-left: 30vw;
-        margin-top: 40vw;
+        margin-top: 20vw;
         overscroll-behavior: none;
     }
     .boutons{
-        font-size: 4rem;
+        font-size: 2rem;
     }
 }
 
