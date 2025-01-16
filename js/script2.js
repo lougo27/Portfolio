@@ -74,9 +74,9 @@ function resizeCanvas() {
     // Re-dessiner le canevas après redimensionnement
     ctx.fillStyle = "#EE9B00";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.font = "35px League Spartan";
+    ctx.font = "2rem League Spartan";
     ctx.fillStyle = "#CA6702";
-    ctx.fillText("Grattez ici !", canvas.width/4,canvas.height-25);
+    ctx.fillText("Grattez ici !", canvas.width/4+5,canvas.height-25);
 
     // Recharger l'image
     image.onload = function () {

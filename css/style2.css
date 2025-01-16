@@ -63,6 +63,21 @@ body {
     justify-content: space-between; 
 }
 
+.boutons{
+    background-color: #CA6702;
+    color: #EFE8D4;
+    border-radius: 16px;
+    border: none;
+    width: 8rem;
+    height: 2rem;
+    font-size: 1rem;
+}
+
+#MesBoutons{
+    display: flex;
+    gap: 30px;
+}
+
 @media (min-width: 1980px) {
     :root {
         --carteWidth: 30rem;  /* beugue lorsque je change */
@@ -88,10 +103,12 @@ body {
     #carteAgratter, #Louane{
         padding-left: 0%;
         margin-left: 0%;
+        margin-top: 18rem;
     }
     #texteMoi {
         margin-top: 5%;
         width: 100%;
+        font-size: 4vw;
     }
 
     #globalQui {
