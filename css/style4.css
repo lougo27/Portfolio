@@ -127,12 +127,11 @@ h2 {
         --tailleConstellation: 40rem;
     }
 
-    #decalage {
-        margin-top: -20%;
-    }
+    
     #titrePage {
         font-size: 4rem;
         margin-bottom: 0%;
+        margin-top: -20%;
     }
     #teaser {
         font-size: 2rem;
