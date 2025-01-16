@@ -90,10 +90,12 @@ body {
     }
     #carteAgratter, #Louane{
         margin-left: 30vw;
-        margin-top: 20vw;
+        margin-top: 30vw;
         overscroll-behavior: none;
     }
-    .boutons{
+    .boutons {
+        width: 11rem;
+        height: 5rem;
         font-size: 2rem;
     }
 }
