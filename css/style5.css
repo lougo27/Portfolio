@@ -136,15 +136,15 @@ body {
     #Menu {
         display: none
     }
+
     body {
         padding-top: 60px; /* Si la hauteur du menu est réduite sur mobile */
     }
 
-
-    /* Adapte les tailles des textes et marges */
     #textenul {
-      font-size: 3vw; /* Texte plus grand pour les petits écrans */
+      font-size: 5vw;
     }
+
     h2#contactez {
         padding: 0%;
         margin: 0%;
@@ -172,8 +172,9 @@ body {
       order: 2;
     }
   
+    
     .messagedefilant {
-      font-size: 3vw; /* Réduit la taille du texte défilant */
+      font-size: 5vw; /* Réduit la taille du texte défilant */
     }
   
     .iconeR {
