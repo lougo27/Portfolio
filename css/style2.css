@@ -20,7 +20,7 @@ body {
     position: absolute;
     border-radius: var(--carteRadius);
     margin-left: 30vw;
-    margin-top: 400px;
+    margin-top: 25rem;
     overscroll-behavior: none;
 }
 
