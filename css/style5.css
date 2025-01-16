@@ -142,6 +142,9 @@ body {
     .flip-card {
         margin-top: 1%;
     }
+    #contenur {
+        border-radius: 20%;
+    }
 
 }
 @media (max-width: 768px) {

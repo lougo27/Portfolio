@@ -95,7 +95,7 @@ h2 {
     stroke-dasharray: 2150;
     stroke-dashoffset: 2150;
     animation-fill-mode: forwards;
-    animation: dashEtoile 8s ease-in-out paused;
+    animation: dashEtoile 6s ease-in-out paused;
     animation-play-state: paused;
     visibility: hidden;
 }
