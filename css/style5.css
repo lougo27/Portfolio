@@ -84,8 +84,8 @@ body {
 
 .reseaux {
     display: flex;
-    
-
+    justify-content: center;
+    margin: 5%;
 }
 
 .iconeR {
@@ -95,9 +95,11 @@ body {
 }
 
 .contenur {
-    margin: 2vw 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    width: 80%; /* Adapte selon la largeur visible souhaitée */
+    width: 100%; /* Adapte selon la largeur visible souhaitée */
     border-radius: 16px;
     overflow: hidden; /* Cache le contenu qui dépasse */
     position: relative;
@@ -107,7 +109,8 @@ body {
 }
   
 .messagedefilant {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     white-space: nowrap; /* Empêche le texte de revenir à la ligne */
     animation: defilement2 15s infinite linear;
 
@@ -115,7 +118,7 @@ body {
   
 .messagedefilant div {
     display: inline-block;
-    padding-left: 80%; /* Laisse un espace initial avant que le texte apparaisse */
+    padding-left: 220%; /* Laisse un espace initial avant que le texte apparaisse */
 }
   
   /* Animation pour le défilement */
@@ -169,7 +172,10 @@ body {
       order: 2;
     }
   
-    
+    .messagedefilant div {
+        display: inline-block;
+        padding-left: 200%; 
+    }
     .messagedefilant {
       font-size: 4vw; /* Réduit la taille du texte défilant */
     }
@@ -178,5 +184,13 @@ body {
       width: 10vw; /* Réduit les icônes des réseaux sociaux */
 
     }
-  }
+
+    :root {
+        --imageWidth: 15rem;
+        --imageHeight: 24rem;
+        --imageRadius: 30px;
+    
+    }
+
+}
   
