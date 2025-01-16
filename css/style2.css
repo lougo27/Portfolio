@@ -65,8 +65,8 @@ body {
 
 @media (min-width: 1980px) {
     :root {
-        --carteWidth: 20rem;  /* beugue lorsque je change */
-        --carteHeight: 20rem;
+        --carteWidth: 30rem;  /* beugue lorsque je change */
+        --carteHeight: 30rem;
         --carteRadius: 16%;
     }
     #gratter {

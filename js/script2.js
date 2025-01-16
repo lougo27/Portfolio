@@ -59,3 +59,31 @@ function clearCircle(e, isMobile) {
     ctx.arc(position.x, position.y, 30, 0, 2*Math.PI);
     ctx.fill();
 }
+
+function resizeCanvas() {
+    const computedStyle = getComputedStyle(canvas);
+    const width = parseFloat(computedStyle.width);
+    const height = parseFloat(computedStyle.height);
+
+    // Mettre à jour les dimensions physiques du canevas
+    canvas.width = width;
+    canvas.height = height;
+
+    // Re-dessiner le canevas après redimensionnement
+    ctx.fillStyle = "#EE9B00";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.font = "22px League Spartan";
+    ctx.fillStyle = "#CA6702";
+    ctx.fillText("Grattez ici !", 100, 280);
+
+    // Recharger l'image
+    image.onload = function () {
+        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+    };
+    image.src = 'assets/images/Mon_avatar.png';
+}
+
+// Appeler la fonction au chargement et au redimensionnement
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
