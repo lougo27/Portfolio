@@ -6,9 +6,9 @@ let isMousePress = false
 
 ctx.fillStyle = "#EE9B00"
 ctx.fillRect(0,0,canvas.width,canvas.height)
-ctx.font = "22px League Spartan"
+ctx.font = "100px League Spartan"
 ctx.fillStyle ="#CA6702"
-ctx.fillText("Grattez ici !", 100,280)
+ctx.fillText("Grattez ici !", canvas.width/3,canvas.height/5)
 
 let image = new Image();
 image.src = 'assets/images/Mon_avatar.png'
@@ -56,10 +56,12 @@ function clearCircle(e, isMobile) {
     //ctx.fillStyle = "#000000";
     ctx.globalCompositeOperation = 'destination-out';
     ctx.beginPath();
-    ctx.arc(position.x, position.y, 30, 0, 2*Math.PI);
+    ctx.arc(position.x, position.y, 35, 0, 2*Math.PI);
     ctx.fill();
 }
 
+
+// Fonction conçu par Chat GPT pour résoudre mon problème de la fonction au dessus puis réajustement de ma part
 function resizeCanvas() {
     const computedStyle = getComputedStyle(canvas);
     const width = parseFloat(computedStyle.width);
@@ -72,9 +74,9 @@ function resizeCanvas() {
     // Re-dessiner le canevas après redimensionnement
     ctx.fillStyle = "#EE9B00";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.font = "22px League Spartan";
+    ctx.font = "35px League Spartan";
     ctx.fillStyle = "#CA6702";
-    ctx.fillText("Grattez ici !", 100, 280);
+    ctx.fillText("Grattez ici !", canvas.width/4,canvas.height-25);
 
     // Recharger l'image
     image.onload = function () {
