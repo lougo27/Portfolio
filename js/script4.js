@@ -137,18 +137,22 @@ for (let i = 0; i < constellations.length; i++) {
     let etoiles = document.createElement('img');
     let divToutesCases = document.createElement('div');
     let divCases = document.createElement('div');
-    let boutonEtoile = document.createElement('button');
+    let boutonEtoile = document.createElement('img');
+    
 
     let titre = document.createElement('h3');
-    let extrait = document.createElement('p')
+    let extrait = document.createElement('p');
+    let voirPlus = document.createElement('bouton')
 
     titre.innerText = constellations[i].nom;
     extrait.innerText = constellations[i].extrait;
     
+    boutonEtoile.src = 'assets/images/click_etoile.png';
     etoiles.src = `assets/svg/${constellations[i].src}`;
     etoiles.alt = constellations[i].nom;
 
-    boutonEtoile.innerText = "click étoile";
+    voirPlus.innerText = "Voir plus";
+    voirPlus.className = "voirPlus"
     etoiles.className = "constel";
     divCases.className = "cases";
     divCases.innerHTML = constellations[i].html;
@@ -157,6 +161,7 @@ for (let i = 0; i < constellations.length; i++) {
     divCases.appendChild(boutonEtoile);
     divCases.appendChild(titre);
     divCases.appendChild(extrait)
+    divCases.appendChild(voirPlus)
     document.getElementById('toutesCases').appendChild(divCases);
 }
 

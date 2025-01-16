@@ -6,12 +6,13 @@ body {
 #titrePage {
     margin-top: -20%;
     margin-bottom: -20%;
+    font-size: 2.5rem;
 }
 
 #teaser {
     font-size: 2rem;
     color: #EE9B00;
-    margin-top: -4%;
+    margin-top: -3%;
 }
 
 h2 {
@@ -20,6 +21,10 @@ h2 {
     font-size: 3em;
     margin-bottom: 25px;
     color: #CA6702;
+}
+
+.boutons {
+    width: 5rem;
 }
 
 #decalage {
@@ -31,7 +36,7 @@ h2 {
 }
 
 #toutesCases {
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -47,7 +52,7 @@ h2 {
     
     border-radius: 10px;
     padding: 15px;
-    width: 300px;
+    width: 20rem;
     text-align: center;
     
 }
@@ -96,3 +101,43 @@ h2 {
     animation-play-state: running;
     animation-fill-mode: forwards;
 }
+
+
+.voirPlus {
+    text-align: center;
+    background-color: #CA6702;
+    color: #EFE8D4;
+    border-radius: 16px;
+    border: none;
+    width: 9rem;
+    height: 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    padding-top: 3%;
+    
+
+}
+
+@media (min-width: 1980px) {
+    
+
+}
+@media (max-width: 768px) {
+    body {
+        padding-top: 10rem; /* Si la hauteur du menu est réduite sur mobile */
+    }
+    #titrePage {
+        font-size: 2rem;
+        margin-top: -20%;
+        margin-bottom: 0%;
+    }
+    
+    #teaser {
+        font-size: 1.5rem;
+        color: #EE9B00;
+        margin-top: -4%;
+    }
+
+
+}
+  
