@@ -133,8 +133,8 @@ body {
  
 @media (min-width: 1990px) {
     :root {
-        --imageWidth: 25rem;
-        --imageHeight: 35rem;
+        --imageWidth: 35rem;
+        --imageHeight: 46rem;
         --imageRadius: 30px;
     
     }
