@@ -69,7 +69,9 @@ body {
         --carteHeight: 20rem;
         --carteRadius: 16%;
     }
-
+    #gratter {
+        width: 200%;
+    }
     #carteAgratter, #Louane{
         margin-left: 30vw;
         margin-top: 40vw;
