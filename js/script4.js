@@ -46,8 +46,6 @@ let constellations = [
   <circle class="cls-2" cx="810.83" cy="409.09" r="9.87"/>
   <circle class="cls-2" cx="446.22" cy="480.88" r="9.87"/>
 </svg>`},
-    { nom: 'coquillage', src: 'fausse_constellation.svg', titre: 'projet secret3', extrait : 'blabalabajanajz', conclusion : 'bye-bye' },
-   { nom: 'coquillage', src: 'fausse_constellation.svg', titre: 'projet secret4', extrait : 'blabalabajanajz', conclusion : 'bye-bye' },
    { nom: 'coquillage', src: 'fausse_constellation.svg', titre: 'projet secret', extrait : 'blabalabajanajz', conclusion : 'bye-bye', html : `<?xml version="1.0" encoding="UTF-8"?>
     <svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28">
       <defs>
@@ -140,6 +138,12 @@ for (let i = 0; i < constellations.length; i++) {
     let divToutesCases = document.createElement('div');
     let divCases = document.createElement('div');
     let boutonEtoile = document.createElement('button');
+
+    let titre = document.createElement('h3');
+    let extrait = document.createElement('p')
+
+    titre.innerText = constellations[i].nom;
+    extrait.innerText = constellations[i].extrait;
     
     etoiles.src = `assets/svg/${constellations[i].src}`;
     etoiles.alt = constellations[i].nom;
@@ -151,6 +155,8 @@ for (let i = 0; i < constellations.length; i++) {
 
     boutonEtoile.className = "boutons";
     divCases.appendChild(boutonEtoile);
+    divCases.appendChild(titre);
+    divCases.appendChild(extrait)
     document.getElementById('toutesCases').appendChild(divCases);
 }
 

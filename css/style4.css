@@ -1,79 +1,98 @@
-body{
+body {
     overflow: visible;
     overflow-x: hidden;
 }
 
-
-.constel {
-    width: 300px;
-    height: 300px;
+#titrePage {
+    margin-top: -20%;
+    margin-bottom: -20%;
 }
 
-h2{
+#teaser {
+    font-size: 2rem;
+    color: #EE9B00;
+    margin-top: -4%;
+}
+
+h2 {
     text-align: center;
-    margin-top: -20%;
+    margin-top: 20px;
     font-size: 3em;
     margin-bottom: 25px;
     color: #CA6702;
 }
+
 #decalage {
-    align-items: center;
-    text-align: center;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    text-align: center;
 }
-#toutesCases{
+
+#toutesCases {
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    text-align: center;
     justify-content: center;
-    justify-content: space-between;
-    
+    gap: 30px;
 }
 
-.boutons{
-    text-align: center;
-    align-items: center;
-}
 .cases {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    
 }
 
+.cases img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.cases button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #CA6702;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cases button:hover {
+    background-color: #a65301;
+}
 
 @keyframes dashEtoile {
     from {
-      stroke-dashoffset: 2150;
+        stroke-dashoffset: 2150;
     }
     to {
-      stroke-dashoffset: 0;
+        stroke-dashoffset: 0;
     }
 }
+
 .cls-1, .cls-2 {
     stroke-dasharray: 2150;
-    stroke-dashoffset: 2150; /* Position initiale */
+    stroke-dashoffset: 2150;
     animation-fill-mode: forwards;
     animation: dashEtoile 8s ease-in-out paused;
     animation-play-state: paused;
-    visibility: hidden; /* Par défaut, caché */
+    visibility: hidden;
 }
 
 .cases.active .cls-1, .cases.active .cls-2 {
-    visibility: visible; /* Rendre visible uniquement si actif */
-    animation-play-state: running; /* Démarrer l'animation */
+    visibility: visible;
+    animation-play-state: running;
     animation-fill-mode: forwards;
-}
-
-
-#Calque_1 {
-    width: 300px;
-}
-
-
-
-.constel {
-    width: 500px;
 }
