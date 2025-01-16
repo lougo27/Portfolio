@@ -2,6 +2,7 @@
     --carteWidth: 20rem;
     --carteHeight: 20rem;
     --carteRadius: 16%;
+    --tailleTexteGratter: 2rem;
 }
 
 body {
@@ -90,7 +91,7 @@ body {
     }
     #carteAgratter, #Louane{
         margin-left: 30vw;
-        margin-top: 30vw;
+        margin-top: 25vw;
         overscroll-behavior: none;
     }
     .boutons {

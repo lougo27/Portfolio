@@ -91,7 +91,7 @@ function initializeCanvas() {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.font = "2em League Spartan";
     ctx.fillStyle = "#CA6702";
-    ctx.fillText("Grattez ici !", canvas.width/4+5, canvas.height-22);
+    ctx.fillText("Grattez ici !", canvas.width/4+10, canvas.height-22);
 
     // Charger l'image de fond
     image.onload = function () {
