@@ -84,8 +84,8 @@ body {
 
 .reseaux {
     display: flex;
-    justify-content: center;
     margin: 5%;
+    margin-left: 0%;
 }
 
 .iconeR {
@@ -133,14 +133,19 @@ body {
  
 @media (min-width: 1990px) {
     :root {
-        --imageWidth: 35rem;
-        --imageHeight: 46rem;
+        --imageWidth: 34rem;
+        --imageHeight: 47rem;
         --imageRadius: 30px;
     
     }
 
 }
 @media (max-width: 768px) {
+    .reseaux {
+        display: flex;
+        justify-content: center;
+        margin: 5%;
+    }
     #Menu {
         display: none
     }
