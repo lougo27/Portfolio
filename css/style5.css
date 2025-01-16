@@ -100,9 +100,9 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 100%; /* Adapte selon la largeur visible souhaitée */
+    width: 100%; 
     border-radius: 16px;
-    overflow: hidden; /* Cache le contenu qui dépasse */
+    overflow: hidden; 
     position: relative;
     background-color: #CA6702;
     color: #EFE8D4;
@@ -112,14 +112,14 @@ body {
 .messagedefilant {
     display: flex;
     justify-content: center;
-    white-space: nowrap; /* Empêche le texte de revenir à la ligne */
+    white-space: nowrap; 
     animation: defilement2 15s infinite linear;
 
 }
   
 .messagedefilant div {
     display: inline-block;
-    padding-left: 220%; /* Laisse un espace initial avant que le texte apparaisse */
+    padding-left: 220%; /* espace avant que le texte apparaisse */
 }
   
   /* Animation pour le défilement */
@@ -158,7 +158,8 @@ body {
     }
 
     body {
-        padding-top: 60px; /* Si la hauteur du menu est réduite sur mobile */
+        padding-top: 60px; 
+        
     }
 
     #textenul {
@@ -173,12 +174,12 @@ body {
     }
     #contact h2 {
         margin-top: 20%;
-      font-size: 2em; /* Réduit la taille du titre */
+      font-size: 2em; 
     }
   
     #contenuContact {
-      flex-direction: column; /* Change la disposition en colonne */
-      gap: 1px; /* Réduit l'espacement entre les éléments */
+      flex-direction: column; 
+      gap: 1px; 
       
     }
     #contact {
@@ -188,7 +189,7 @@ body {
         order: 1; /* Place le texte avant la carte */
     }
     .flip-card {
-      margin: 0 auto; /* Centre la carte */
+      margin: 0 auto; 
       order: 2;
     }
   
@@ -197,11 +198,11 @@ body {
         padding-left: 200%; 
     }
     .messagedefilant {
-      font-size: 4vw; /* Réduit la taille du texte défilant */
+      font-size: 4vw; 
     }
   
     .iconeR {
-      width: 10vw; /* Réduit les icônes des réseaux sociaux */
+      width: 10vw; 
 
     }
 

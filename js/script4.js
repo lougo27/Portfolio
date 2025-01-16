@@ -173,7 +173,7 @@ Array.from(document.getElementsByClassName('boutons')).forEach((bouton) => {
         
         // Réinitialiser et relancer l'animation
         divCase.classList.remove('active'); // Supprimer la classe pour réinitialiser
-        void divCase.offsetWidth; // Force un reflow pour réinitialiser l'animation
+        void divCase.offsetWidth; // réinitialiser l'animation
         divCase.classList.add('active'); // Ajouter la classe pour relancer l'animation
         
     });

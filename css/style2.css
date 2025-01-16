@@ -27,7 +27,6 @@ body {
 
 
 #gratter {
-    /* Prend l'espace restant disponible( flex: 1; ) */
     display: flex;
     justify-content: center;
     align-items: center;

@@ -176,7 +176,7 @@ h1 {
 
 
 
-/* Foncer l'arrière-plan de la fenêtre modale */
+
 .modal {
     display: none; 
     left: 0;
@@ -188,7 +188,7 @@ h1 {
     background-color: rgba(0, 0, 0, 0.4);
   }
   
-  /* Afficher la fenêtre modale lorsqu'elle est ciblée par un lien supprimer */
+  /* Afficher la fenêtre modale lorsqu'elle est ciblée par un lien */
   .modal:target {
     display: table;
     position: absolute;
@@ -302,11 +302,11 @@ nav {
   width: 100%;
   height: 100px;
   background: #EFE8D4;
-  position: fixed; /* Fixe le menu en haut de la page */
-  top: 0; /* Positionne le menu tout en haut */
-  left: 0; /* Aligne le menu à gauche */
-  right: 0; /* Aligne le menu à droite */
-  z-index: 1000; /* Assure que le menu est au-dessus de tout autre contenu */
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  z-index: 1000; 
 }
 
 #ligne {
@@ -338,7 +338,7 @@ label {
 }
 
 input[type="checkbox"] {
-  display: none; /* Masque la case à cocher */
+  display: none; /* Masque la case à cocher je comprend pas trop mais apparement elle me sauve mon programme bancale*/
 }
 
 .main_pages {
@@ -370,33 +370,31 @@ nav a:hover {
   width: 20rem; 
   margin: 0px auto; 
   background-color: #EE9B00; 
-  /* box-shadow: 0px 5px 20px #999; */
+  /* box-shadow: 0px 5px 20px #999; (à mettre éventuellement)*/
   border-radius: 32px;
 }
 .card a {  
   text-decoration: none;
 }
-.card:hover .card-image img { /*6*/
+.card:hover .card-image img { 
   width: 160%;
   filter: grayscale(0);
   border-radius: 32px;
 }
 
 .card-image {
-  height: 250px;/*1*/
-  position: relative;/*2*/
-  overflow: hidden;/*3*/
+  height: 250px;
+  position: relative;
+  overflow: hidden;
   border-radius: 32px;
 }
 .card-image img {
-  width: 150%;/*4*/
-    /*5 - Méthode de centrage en fonction de la taille de l'image */
+  width: 150%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  filter: grayscale(1);/*6*/
-    /*7 - Transition */
+  filter: grayscale(1);
   transition-property: filter width; 
   transition-duration: .3s;
   transition-timing-function: ease;
@@ -458,15 +456,15 @@ nav a:hover {
     flex-direction: column;
   }
   .main_pages {
-      display: none; /* Cache le menu sur les petits écrans */
+      display: none; 
       flex-direction: column;
       background: #CA6702;
       height: 220px;
       position: absolute;
-      top: 60px; /* Positionne le menu juste sous la barre de navigation */
+      top: 60px; 
       left: 0;
       width: 100%;
-      z-index: 10; /* S'assure que le menu soit au-dessus du contenu */
+      z-index: 10; 
   }
 
   .main_pages a {
@@ -489,7 +487,7 @@ nav a:hover {
   }
 
   #toggle:checked + .main_pages {
-      display: flex; /* Affiche le menu quand la case est cochée */
+      display: flex; 
   }
 }
 

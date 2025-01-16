@@ -5,7 +5,7 @@ const ctx = canvas.getContext("2d");
 let isMousePress = false;
 let isResizing = false;
 
-// Initialisation du canevas
+// Initialisation du canevas (la je pense c'est important que je commente)
 function resizeCanvas() {
     const computedStyle = getComputedStyle(canvas);
     const width = parseFloat(computedStyle.width);
