@@ -1,3 +1,9 @@
+:root {
+    --carteWidth: 20rem;
+    --carteHeight: 20rem;
+    --carteRadius: 16%;
+}
+
 body {
     background-color: #EFE8D4;
     overflow: visible;
@@ -9,12 +15,13 @@ body {
 }
 
 #carteAgratter, #Louane{
-    width: 20rem;
-    height: 20rem;
+    height: var(--carteHeight);
+    width: var(--carteWidth);
     position: absolute;
-    border-radius: 16%;
+    border-radius: var(--carteRadius);
     margin-left: 30vw;
-    margin-top: 300px;
+    margin-top: 400px;
+    overscroll-behavior: none;
 }
 
 
@@ -46,6 +53,7 @@ body {
 }
 
 #texteMoi {
+    font-size: 1.5vw;
     width: 60%;
     justify-content: flex-start;
 }
@@ -55,6 +63,13 @@ body {
     justify-content: space-between; 
 }
 
+@media (min-width: 1980px) {
+    :root {
+        --carteWidth: 30rem;
+        --carteHeight: 30rem;
+        --carteRadius: 16%;
+    }
+}
 
 @media (max-width: 768px) {
     #interieur {

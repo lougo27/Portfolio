@@ -12,7 +12,6 @@ ctx.fillText("Grattez ici !", 100,280)
 
 let image = new Image();
 image.src = 'assets/images/Mon_avatar.png'
-console.dir(image)
 image.onload = function(){
     ctx.drawImage(image,0,0,canvas.width,canvas.height);
 }
