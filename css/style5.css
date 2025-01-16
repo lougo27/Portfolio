@@ -1,14 +1,12 @@
 :root {
-    --imageWidth: 22rem;
-    --imageHeight: 33rem;
+    --imageWidth: 20rem;
+    --imageHeight: 31rem;
     --imageRadius: 30px;
     /* --imageWidth: 85vw;
     --imageHeight: 135vw; */
 }
 
-img {
-    width: 30%;
-}
+
 body {
     overflow: visible;
 }
@@ -76,7 +74,6 @@ body {
   
 .flip-card-front {
     background-color: transparent;
-    color: black;
 }
   
 .flip-card-back {
@@ -142,7 +139,7 @@ body {
     }
 
     #textenul {
-      font-size: 5vw;
+      font-size: 4vw;
     }
 
     h2#contactez {
@@ -174,7 +171,7 @@ body {
   
     
     .messagedefilant {
-      font-size: 5vw; /* Réduit la taille du texte défilant */
+      font-size: 4vw; /* Réduit la taille du texte défilant */
     }
   
     .iconeR {
