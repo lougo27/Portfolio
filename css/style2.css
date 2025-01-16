@@ -65,14 +65,14 @@ body {
 
 @media (min-width: 1980px) {
     :root {
-        --carteWidth: 30rem;
-        --carteHeight: 30rem;
+        --carteWidth: 20rem;  /* beugue lorsque je change */
+        --carteHeight: 20rem;
         --carteRadius: 16%;
     }
 
     #carteAgratter, #Louane{
         margin-left: 30vw;
-        margin-top: 60vw;
+        margin-top: 40vw;
         overscroll-behavior: none;
     }
 }
