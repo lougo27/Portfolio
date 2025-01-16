@@ -1,44 +1,8 @@
 body {
     background-color: #EFE8D4;
     overflow: visible;
-}
-
-* {
-    font-family: "League Spartan";
     overscroll-behavior: none;
 }
-h1 {
-    font-size: 300%;
-    position: relative;
-    right: 0;
-}
-
-
-@keyframes dash {
-    from {
-      stroke-dashoffset: 1250;
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-
-#navPath {
-    stroke-dasharray: 1250;
-    stroke-dashoffset: 0;
-    animation-fill-mode: forwards;
-    animation: dash 5s ease-in-out;
-}
-
-#rond {
-    border: solid;
-    border-color: black;
-}
-
-/* img, #me {
-    width: 50%;
-    clip-path:ellipse(33% 50%);
-} */
 
 #inutile {
     width: 0px;
@@ -46,17 +10,17 @@ h1 {
 }
 
 #carteAgratter, #Louane{
-    width: 300px;
-    height: 300px;
+    width: 20rem;
+    height: 20rem;
     position: absolute;
     border-radius: 16%;
-    margin-left: 40vw;
+    margin-left: 30vw;
     margin-top: 300px;
 }
 
 
 #gratter {
-    flex: 1; /* Prend l'espace restant disponible */
+    /* Prend l'espace restant disponible( flex: 1; ) */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,7 +34,7 @@ h1 {
 #globalQui {
     position: relative;
     display: bloc;
-    margin: 0 15%;
+    margin: 0 10%;
 }
 
 #Qui {
@@ -83,7 +47,7 @@ h1 {
 }
 
 #texteMoi {
-    width: 50%;
+    width: 60%;
     justify-content: flex-start;
 }
 
@@ -91,3 +55,31 @@ h1 {
     display: flex;
     justify-content: space-between; 
 }
+
+
+@media (max-width: 768px) {
+    #interieur {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #carteAgratter, #Louane{
+        padding-left: 0%;
+        margin-left: 0%;
+    }
+    #texteMoi {
+        margin-top: 5%;
+        width: 100%;
+    }
+
+    #globalQui {
+        margin: 10%;
+    }
+
+    #Qui {
+        margin-top: 20%;
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+}
+  
