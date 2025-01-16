@@ -20,7 +20,7 @@ body {
     position: absolute;
     border-radius: var(--carteRadius);
     margin-left: 30vw;
-    margin-top: 25rem;
+    margin-top: 400px;
     overscroll-behavior: none;
 }
 
@@ -68,6 +68,12 @@ body {
         --carteWidth: 30rem;
         --carteHeight: 30rem;
         --carteRadius: 16%;
+    }
+
+    #carteAgratter, #Louane{
+        margin-left: 30vw;
+        margin-top: 60vw;
+        overscroll-behavior: none;
     }
 }
 
