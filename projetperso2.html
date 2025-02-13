@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qui-suis je?</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style4.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <style>
+        .container {
+            width: 100%;
+            /* max-width: 1200px; */
+            margin: 20px auto;
+            text-align: center;
+        }
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+            padding: 20px;
+            white-space: nowrap;
+        }
+        .card {
+            flex: 0 0 auto;
+            width: 300px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: left;
+            scroll-snap-align: start;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .card {
+            scrollbar-width: none; /* Masque la barre de défilement sur Firefox */
+            -ms-overflow-style: none; /* Masque la barre de défilement sur Internet Explorer et Edge */
+        }
+
+        .card::-webkit-scrollbar {
+            display: none; /* Masque la barre de défilement sur Chrome, Safari et Opera */
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: none; /* Masqué par défaut */
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #555;
+        }
+
+        .scrollable-div {
+            max-height: 200px; /* Par exemple */
+            overflow: auto;
+            overflow-x: hidden !important; /* Désactive le scroll horizontal */
+            scrollbar-width: none; /* Masque la barre de scroll sur Firefox */
+        }
+
+        .scrollable-div::-webkit-scrollbar {
+            display: none; /* Masque la barre de scroll sur Chrome/Safari */
+        }
+
+        .carousel {
+            margin: 10vh;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .carousel {
+                margin: 0%;
+            }
+        }
+  
+
+
+    </style>
+    <div id="Menu">
+
+        <svg width="100%" height="100%" viewbox="-300 0 1057 300"  preserveAspectRatio="none" fill="none">
+            <text id="titre" x="-300" y="60" font-size="50" font-family="League Spartan" fill="#CA6702" font-weight="500">
+                Louane Gouin
+            </text>
+    
+            <path id="navPath" d="M11.712 53.0203C1.04538 83.187 -10.988 144.22 26.212 147.02C72.712 150.52 106.212 -5.97966 132.712 12.5203C159.212 31.0203 215.712 154.02 348.712 93.5203C481.712 33.0203 506.5 -30.0001 536 18.4999C565.5 66.9999 575 90.9999 649.5 78.4999C724 65.9999 732.551 80.3875 727.5 91.4999C720 108 667 100.5 649.5 147C625.645 210.387 727.5 252.833 756.5 257.5" stroke="#CA6702" stroke-width="2"/>
+                
+            <text dy="-5" fill="#CA6702" class="menu">
+            <textPath href="#navPath" startOffset="15%"><a href="./index.html">Accueil</a></textPath>
+            </text>
+            <text dy="-5" fill="#CA6702" class="menu">
+                <textPath href="#navPath" startOffset="30%"><a href="./presentation.html">Qui suis-je ?</a></textPath>
+            </text>
+            <text dy="-5" fill="#CA6702" class="menu">
+                <textPath href="#navPath" startOffset="45%"><a href="./projetscolaire.html">Projets scolaires</a></textPath>
+            </text>
+            <text dy="-5" fill="#CA6702" class="menu">
+                <textPath href="#navPath" startOffset="65%"><a href="projetperso.html">Projets personnels</a></textPath>
+            </text>
+            <text dy="-5" fill="#CA6702" class="menu">
+                <textPath href="#navPath" startOffset="90%"><a href="./contact.html">Contact</a></textPath>
+            </text>
+    
+            <foreignObject id="movingCircle" x="0" y="0" width="200" height="200">
+                <div id="rocketImage" style="       position: absolute;       width: 50px;       height: 50px;       clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);       background: gold;     "  > </div>
+                <!-- <img id="rocketImage" src="rocket.svg" alt="" srcset=""> -->
+            </foreignObject>
+                
+        </svg>      
+    </div>
+        
+    <div id="menuMobile">
+        <nav>
+            <div id="ligne">
+                <img src="assets/images/coquillage.jpg" alt="logo">
+                <p id="menuCentre">Louane Gouin</p>
+                <label for="toggle">☰</label>
+            </div>
+                
+                
+            <input type="checkbox" id="toggle">
+            <div class="main_pages">
+                <a href="./index.html">Accueil</a>
+                <a href="./presentation.html">Qui suis-je ?</a>
+                <a href="./projetscolaire.html">Projets scolaire</a>
+                <a href="./projetperso.html">Projets personnels</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </nav> 
+    </div>
+    <div id="decalage">
+        <div>
+            <h2 id="titrePage">Mes projets personnels</h2>
+        </div>
+        
+    <div id="toutesCases">
+        
+        
+        
+    </div>
+
+</div>  
+<div class="container">
+    <div class="carousel" id="carousel">
+        <!-- Cartes générées ici -->
+    </div>
+</div>
+   <img src="assets/images/projets/" alt=""> 
+<script>
+    const data = [
+        {
+            description: "blabla",
+            title: "The Maze Game",
+            src: "assets/images/projets/maze.png",
+            src2: "assets/images/projets/TheMazeImage.png",
+            button: "https://lougo27.github.io/TheMaze/",
+        },
+        {
+            description: "BLALPAOAO",
+            title: "Galerie Photos - Memory",
+            src: "assets/images/projets/galeriePhotos2.png",
+            src2: "assets/images/projets/galeriePhotos.png"
+        },
+        {
+            description: "bfghhhh",
+            title: "Bubble Game",
+            src: "assets/images/projets/bubble.png",
+            video: "assets/images/projets/naviguation site.mp4"
+        },
+        {
+            description: "hhhhhh",
+            title: "Dessins de personnages Fleurs",
+            src: "assets/images/projets/fleur_transate.jpg",
+            src2: "assets/images/projets/fleur_rose.jpg",
+        },
+        // {
+        //     description: "bhbb",
+        //     title: "hhhhhhh",
+        //     src: "",
+        // },
+        // {
+        //     description: "njhhjhh",
+        //     title: "Hmmmmmmmmmmmmmmmmmm",
+        //     src: "",
+        // }
+    ];
+
+    const carousel = document.getElementById("carousel");
+    carousel.style.zIndex = "1000"
+    carousel.style.gap = "30px"
+    carousel.style.marginTop ="0"
+    carousel.style.marginBottom ="0"
+
+    data.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.style.display ="flex";
+        card.style.flexDirection ="colomn";
+        card.style.flexWrap ="wrap";
+        card.style.gap = "10px"
+        card.style.maxHeight = "80vh";
+        card.style.overflowY = "auto";
+        card.style.overflowX = "auto";
+        //card.style.overflowY = 'hidden scroll'
+        
+        const title = document.createElement("h3");
+        title.textContent = item.title;
+    
+        
+        const description = document.createElement("p");
+        description.textContent = item.description;
+
+        
+        const divText = document.createElement("div")
+        card.appendChild(divText);
+        divText.appendChild(title);
+        divText.appendChild(description);
+
+        const img = document.createElement("img");
+        img.src = item.src;
+        img.alt = item.title;
+        card.appendChild(img);
+
+        if (item.src2) { // Vérifie si src2 existe et n'est pas vide
+            const img2 = document.createElement("img");
+            img2.src = item.src2;
+            img2.alt = item.title;
+            card.appendChild(img2);
+        }
+
+        if (item.src3) { 
+            const img3 = document.createElement("img");
+            img3.src = item.src3;
+            img3.alt = item.title;
+            card.appendChild(img3);
+        }
+
+        if (item.video) {
+            const videoContainer = document.createElement("div");
+            videoContainer.className = "video-container";
+
+            const video = document.createElement("video");
+            video.src = item.video
+            video.controls = true; // Ajoute les contrôles (play, pause, volume...)
+            video.autoplay = true; // Démarre automatiquement
+            video.muted = true; // Obligatoire pour que l'autoplay fonctionne
+            video.loop = true; // Répète la vidéo en boucle
+            video.style.width = "100%"
+
+            videoContainer.appendChild(video);
+            card.appendChild(videoContainer);
+
+        }
+
+        if (item.button) {
+            const button = document.createElement("button");
+            button.innerText = "Voir le projet"
+            button.addEventListener("click", () => {
+                window.open(item.button, "_blank"); // Ouvre dans un nouvel onglet
+            });
+            card.appendChild(button);
+        }
+
+        
+        
+        
+        carousel.appendChild(card);
+    });
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Création du bouton
+    const scrollButton = document.createElement("button");
+    scrollButton.innerHTML = "&#8679;"; // Flèche vers le haut (↑)
+    scrollButton.className = "scroll-to-top";
+    //scrollButton.style.zIndex = "1000"
+
+    // Ajout de l'événement de clic pour remonter en haut
+    scrollButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Ajout du bouton au body
+    document.body.appendChild(scrollButton);
+
+    // Affichage du bouton uniquement quand on scrolle
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+            scrollButton.style.display = "block";
+        } else {
+            scrollButton.style.display = "none";
+        }
+    });
+
+
+});
+
+
+
+</script>
+
+    
+    
+</body>
+
+<script src="js/star_path.js"></script>
+</html>
