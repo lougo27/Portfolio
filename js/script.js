@@ -29,7 +29,7 @@ let photoProjet = [
     { nom: 'maze', src: 'projets/maze.png', titre : 'The Maze Game', description : "jeu crée dans mon temps libre pour m'entrainer au code", image1 : 'TheMazeImage.png', image2 : 'soundtrapMaze.png'},
     { nom: 'hibou', src: 'vignettes/bubble-100.jpg', image1 : 'bubble.png', image2 : "anim_bubble.png", image3 : 'mockup_bubble.jpg' },
     { nom: 'photo', src: 'vignettes/happy-100.jpg', image1 : 'LogoLigne.png', image2 : 'teeShirtNoirDos.png', image3 : 'naviguation site.mp4' },
-    { nom: 'photo1', src: 'projets/doctolib.png', image1 : 'logo_doctolib.png', image2 : 'doctolib.png', image3 : 'Phase_explo_projet_perso.pdf' },
+    { nom: 'photo1', src: 'vignettes/pingo-100.jpg', image1 : 'logo_doctolib.png', image2 : 'doctolib.png', image3 : 'Phase_explo_projet_perso.pdf' },
     { 
       nom: 'trousse',
       src: 'trousse.jpg',
