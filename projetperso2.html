@@ -245,7 +245,7 @@
 <script>
     const data = [
         {
-            description: "blabla",
+            description: "The Maze est le premier défi que je mes suis donnée en code javaScript mais aussi ma première réalisation dans un temps limité. Le challenge était de réaliser entièrement un jeu de labyrinthe, en seulement une journée. J'ai réussi a à la fois réalisé le jeu mais aussi à concevoir la musique, le site contenant le jeu et la façon de mémoriser les meilleurs score. ",
             title: "The Maze Game",
             src: "assets/images/projets/maze.png",
             src2: "assets/images/projets/TheMazeImage.png",
@@ -255,13 +255,12 @@
             description: "BLALPAOAO",
             title: "Galerie Photos - Memory",
             src: "assets/images/projets/galeriePhotos2.png",
-            src2: "assets/images/projets/galeriePhotos.png"
+            src2: "assets/images/projets/galeriePhotos.png",
         },
         {
             description: "bfghhhh",
             title: "Bubble Game",
-            src: "assets/images/projets/bubble.png",
-            video: "assets/images/projets/naviguation_site.mp4"
+            src: "assets/images/vignettes/bubble-100.jpg",
         },
         {
             description: "hhhhhh",
@@ -306,7 +305,7 @@
         
         const description = document.createElement("p");
         description.textContent = item.description;
-
+        description.style.flexWrap = "wrap"
         
         const divText = document.createElement("div")
         card.appendChild(divText);
