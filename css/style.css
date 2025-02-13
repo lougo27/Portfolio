@@ -30,10 +30,11 @@ h1 {
   display: flex;
   text-align: end;
   justify-content: end;
-  
+  z-index: 1000000;
 }
 .menu {
   font-size: 120%;
+  z-index: 1000;
 }
 
 
@@ -313,7 +314,7 @@ position: fixed;
 top: 0; 
 left: 0; 
 right: 0; 
-z-index: 1000; 
+z-index: 10000; 
 }
 
 #ligne {

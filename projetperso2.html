@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qui-suis je?</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style4.css">
+    <!-- <link rel="stylesheet" href="css/style4.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
@@ -13,6 +13,7 @@
 </head>
 <body>
     <style>
+        
         .container {
             width: 100%;
             /* max-width: 1200px; */
@@ -100,7 +101,47 @@
                 margin: 0%;
             }
         }
-  
+        
+        .carousel-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            gap: 10px;
+        }
+
+        .carousel-buttons button {
+            background-color: #CA6702;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 2vw;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        .carousel-buttons button:hover {
+            background-color: #a15002;
+        }
+
+        #titrePage {
+            font-size: 4em;
+            margin-bottom: 25px;
+            color: #CA6702;
+        }
+
+        #divTitrePage {
+            margin-top: -15%;
+            text-align: center;
+        }
+
+        body {
+            overflow-y: visible;
+        }
+
 
 
     </style>
@@ -156,23 +197,27 @@
             </div>
         </nav>    
     </div>
-    <div id="decalage">
+<div>
+    <div id="divTitrePage">
         <div>
             <h2 id="titrePage">Mes projets personnels</h2>
         </div>
-        
-    <div id="toutesCases">
-        
-        
-        
     </div>
 
-</div>  
-<div class="container">
-    <div class="carousel" id="carousel">
-        <!-- Cartes générées ici -->
+     
+    <div class="container">
+        <div class="carousel" id="carousel">
+            <!-- Cartes générées ici -->
+        </div>
+        <div class="carousel-buttons">
+            <button id="prevBtn">←</button>
+            <button id="nextBtn">→</button>
+        </div>
     </div>
-</div>
+</div>  
+
+
+
    <img src="assets/images/projets/" alt=""> 
 <script>
     const data = [
@@ -214,7 +259,7 @@
     ];
 
     const carousel = document.getElementById("carousel");
-    carousel.style.zIndex = "1000"
+    // carousel.style.zIndex = "1000"
     carousel.style.gap = "30px"
     carousel.style.marginTop ="0"
     carousel.style.marginBottom ="0"
@@ -291,11 +336,27 @@
         }
 
         
-        
+
         
         carousel.appendChild(card);
     });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.getElementById("carousel");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    // Définit la largeur de défilement par carte
+    const scrollAmount = 300; // Ajuste selon la taille des cartes
+
+    prevBtn.addEventListener("click", () => {
+        carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
+
+    nextBtn.addEventListener("click", () => {
+        carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+});
 
 
 document.addEventListener("DOMContentLoaded", () => {
