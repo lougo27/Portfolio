@@ -168,6 +168,35 @@
         body {
             overflow-y: visible;
         }
+           
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        /* Bouton de fermeture */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+        }
 
 
 
@@ -236,6 +265,12 @@
         <button id="prevBtn" class="carousel-btn left">←</button>
         <div class="carousel" id="carousel"></div>
         <button id="nextBtn" class="carousel-btn right">→</button>
+    </div>
+
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-img">
     </div>
 </div>  
 
@@ -313,14 +348,18 @@
         divText.appendChild(description);
 
         const img = document.createElement("img");
+        img.className ="carousel-img";
         img.src = item.src;
         img.alt = item.title;
+        img.className ="carousel-img";
         card.appendChild(img);
 
         if (item.src2) { // Vérifie si src2 existe et n'est pas vide
             const img2 = document.createElement("img");
+            img2.className = "carousel-img";
             img2.src = item.src2;
             img2.alt = item.title;
+            
             card.appendChild(img2);
         }
 
@@ -404,9 +443,38 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-
+    
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.querySelector(".close");
+
+    if (!lightbox || !lightboxImg || !closeBtn) {
+        return;
+    }
+
+    // Sélectionner les images DANS les cartes du carrousel
+    document.querySelectorAll(".carousel-img").forEach(img => {
+        img.addEventListener("click", () => {
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+        });
+    });
+
+    // Fermeture de la lightbox
+    closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+
+    // Fermeture en cliquant en dehors de l'image
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+    });
+});
 
 
 </script>
