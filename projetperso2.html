@@ -176,7 +176,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: #991a1a1a;
             justify-content: center;
             align-items: center;
             z-index: 1000;
@@ -451,11 +451,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const lightboxImg = document.getElementById("lightbox-img");
     const closeBtn = document.querySelector(".close");
 
-    if (!lightbox || !lightboxImg || !closeBtn) {
-        return;
-    }
-
-    // Sélectionner les images DANS les cartes du carrousel
     document.querySelectorAll(".carousel-img").forEach(img => {
         img.addEventListener("click", () => {
             lightbox.style.display = "flex";
