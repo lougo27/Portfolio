@@ -223,9 +223,11 @@ body {
 }
 
 .boutons{
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    text-decoration: none;
     margin: auto;
     background-color: #CA6702;
     color: #EFE8D4;
