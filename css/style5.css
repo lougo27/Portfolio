@@ -85,8 +85,15 @@ body {
 
 .reseaux {
     display: flex;
+    align-items: center;
     margin: 5%;
     margin-left: 0%;
+    padding: auto;
+}
+
+#interieur-reseaux {
+    display: flex;
+    gap: 10px;
 }
 
 .iconeR {
@@ -128,7 +135,7 @@ body {
       transform: translateX(18%); /* Le texte commence à l'extérieur à droite */
     }
     100% {
-      transform: translateX(-200%); /* Le texte défile vers l'extérieur à gauche */
+      transform: translateX(-210%); /* Le texte défile vers l'extérieur à gauche */
     }
 }
  
@@ -214,4 +221,19 @@ body {
     }
 
 }
+
+.boutons{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    background-color: #CA6702;
+    color: #EFE8D4;
+    border-radius: 20px;
+    border: none;
+    width: 9rem;
+    height: 3rem;
+    font-size: 1rem;
+}
+
   
