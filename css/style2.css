@@ -21,7 +21,7 @@ body {
     position: absolute;
     border-radius: var(--carteRadius);
     margin-left: 30vw;
-    margin-top: 25rem;
+    margin-top: 22rem;
     overscroll-behavior: none;
 }
 
@@ -64,6 +64,10 @@ body {
 }
 
 .boutons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     background-color: #CA6702;
     color: #EFE8D4;
     border-radius: 20px;
@@ -89,8 +93,8 @@ body {
         width: 200%;
     }
     #carteAgratter, #Louane{
-        margin-left: 30vw;
-        margin-top: 25vw;
+        /* margin-left: 25vw;
+        margin-top: 10vw; */
         overscroll-behavior: none;
     }
     .boutons {

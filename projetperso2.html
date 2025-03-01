@@ -280,7 +280,7 @@
 <script>
     const data = [
         {
-            description: "The Maze est le premier défi que je mes suis donnée en code javaScript mais aussi ma première réalisation dans un temps limité. Le challenge était de réaliser entièrement un jeu de labyrinthe, en seulement une journée. J'ai réussi a à la fois réalisé le jeu mais aussi à concevoir la musique, le site contenant le jeu et la façon de mémoriser les meilleurs score. ",
+            description: "The Maze est le premier défi que je me suis lancé en apprenant le JavaScript. <br><br> Un week-end, je me suis mise au défi de créer un jeu en une après-midi, et l'idée d'un labyrinthe m'est alors venue. <br><br> J'ai commencé par générer un labyrinthe de façon aléatoire, avant d'implémenter le déplacement du personnage, un minuteur et la sauvegarde du meilleur temps via le local storage. Puis, voyant le temps défiler, j'ai rapidement conçu une interface, ce qui m'a valu quelques erreurs dans mon code. <br><br> Enfin, lors de la dernière demi-heure, j’ai entièrement composé la musique d’ambiance avec Soundtrap pour finaliser mon défi.",
             title: "The Maze Game",
             src: "assets/images/projets/maze.png",
             src2: "assets/images/projets/TheMazeImage.png",
@@ -325,24 +325,32 @@
         const card = document.createElement("div");
         card.className = "card";
         card.style.display ="flex";
-        card.style.flexDirection ="colomn";
-        card.style.flexWrap ="wrap";
+        card.style.flexDirection ="column";
+        //card.style.flexWrap ="wrap";
         card.style.gap = "10px"
         card.style.maxHeight = "80vh";
         card.style.overflowY = "auto";
-        card.style.overflowX = "auto";
+        card.style.overflowX = "hidden";
         card.style.width = "22vw"
         //card.style.overflowY = 'hidden scroll'
         
         const title = document.createElement("h3");
-        title.textContent = item.title;
+        title.innerHTML = item.title;
+        title.style.wordBreak = "break-word";  // Coupe les mots longs
+        title.style.overflowWrap = "break-word"; // Alternative pour assurer le retour à la ligne
+        title.style.whiteSpace = "normal"; // Empêche le texte de rester sur une seule ligne
+        
     
         
         const description = document.createElement("p");
-        description.textContent = item.description;
-        description.style.flexWrap = "wrap"
-        
-        const divText = document.createElement("div")
+        description.innerHTML = item.description;
+        description.style.wordBreak = "break-word";  // Coupe les mots longs
+        description.style.overflowWrap = "break-word"; // Alternative pour assurer le retour à la ligne
+        description.style.whiteSpace = "normal"; // Empêche le texte de rester sur une seule ligne
+        const divText = document.createElement("div");
+        divText.style.display ="flex"
+        divText.style.flexWrap = "wrap";
+        divText.style.width = "100%";
         card.appendChild(divText);
         divText.appendChild(title);
         divText.appendChild(description);
