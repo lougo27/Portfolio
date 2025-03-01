@@ -161,6 +161,56 @@
             text-align: center;
         }
 
+        body {
+            overflow-y: visible;
+        }
+           
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #991a1a1a;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        /* Bouton de fermeture */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .boutons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            margin: auto;
+            background-color: #CA6702;
+            color: #EFE8D4;
+            border-radius: 20px;
+            border: none;
+            width: 10rem;
+            height: 10rem;
+            padding: 0.5rem 0;
+            font-size: 1rem;
+        }
+
 
     </style>
     <div id="Menu">
@@ -216,30 +266,58 @@
         </nav> 
 
     </div>
-    <div id="divTitrePage">
-        <div>
-            <h2 id="titrePage">Projets scolaire</h2>
+    <div>
+        <div id="divTitrePage">
+            <div>
+                <h2 id="titrePage">Projets scolaire</h2>
+            </div>
         </div>
-    </div>
     
  
-    <div class="carousel-container">
-        <button id="prevBtn" class="carousel-btn left">←</button>
-        <div class="carousel" id="carousel">
-            <!-- Tes cartes ici -->
+        <div class="carousel-container">
+            <button id="prevBtn" class="carousel-btn left">←</button>
+            <div class="carousel" id="carousel">
+                <!-- Tes cartes ici -->
+            </div>
+            <button id="nextBtn" class="carousel-btn right">→</button>
         </div>
-        <button id="nextBtn" class="carousel-btn right">→</button>
+
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img id="lightbox-img" class="lightbox-img">
+        </div>
     </div>
     
-       <img src="assets/images/projets/" alt=""> 
+    
+       <img src="assets/images/projets/.png" alt=""> 
     <script>
         const data = [
             {
-                description: "blabla",
-                title: "The Maze Game",
-                src: "assets/images/projets/LogoLigne.png",
+                description: "En décembre, j’ai eu la chance d’effectuer un stage de deux semaines chez Sisméo Paris, où j’ai travaillé sur un projet interne touchant à plusieurs domaines. <br><br>J’ai d’abord exploré le graphisme, en créant un logo sur Illustrator et des mockups sur Photoshop. Ensuite, je me suis plongée dans l’UX/UI design, en concevant la maquette du site sur Figma. Enfin, j’ai mis en pratique mes compétences en développement web en réalisant le site et son adaptation responsive sur WordPress avec Elementor.",
+                title: "Happy Survival - stage chez Sisméo Paris",
+                src: "assets/images/vignettes/happy-100.jpg",
                 src2: "assets/images/projets/teeShirtNoirDos.png",
                 video: "assets/images/projets/naviguation-site_happy.mp4"
+            },
+            {
+                description: "Dans le cadre de mon apprentissage du JavaScript, nous devions créer une carte web avec un objet et générer les éléments grâce aux boucles. On devait aussi intégrer un switch au niveau du mode d'affichage. <br><br>Comme j’avais déjà commencé à apprendre le JS en autodidacte, j’ai voulu aller plus loin en me lançant un défi : concevoir une borne d’arcade et intégrer cartes directement à l’écran ! <br><br>Le projet est toujours en cours de réalisation !",
+                title: "Game Museum",
+                src: "assets/images/projets/GameMuseum.png",
+                src2: "assets/images/projets/GameMuseum2.png",
+                src3: "assets/images/projets/GameMuseum3.png",
+            },
+            {
+                description: "Lors d’un workshop d’une semaine, notre filière a eu l’opportunité de découvrir Blender. Nous avons d’abord appris à modéliser des objets, comme la dague ci-dessous, avant de réaliser une courte animation inspirée du Memphis Design, avec un rendu en cell-shading. <br><br>Au fil du projet, nous avons exploré la modélisation, l’unwrapping, le texturing, l’animation, la mise en scène et les réglages de rendu sur Blender. Seul le personnage a été importé depuis Mixamo. <br><br>Cette expérience m’a donné envie d’aller plus loin et de me plonger dans Three.js pour intégrer de la 3D dans des sites web !",
+                title: "Animation Blender",
+                src: "assets/images/projets/sabre_blender.png",
+                video: "assets/images/projets/anim_blender.mp4",
+            },
+            {
+                description: "fff",
+                title: "Hype",
+                video: "",
+                video2: "",
+                src: "",
             },
             {
                 description: "BLALPAOAO",
@@ -248,47 +326,33 @@
                 src2: "assets/images/projets/montre_modele.png",
             },
             {
-                description: "bfghhhh",
-                title: "Bubble Game",
-                src: "assets/images/projets/GameMuseum.png",
-                src2: "assets/images/projets/GameMuseum2.png",
-                src3: "assets/images/projets/GameMuseum3.png",
-            },
-            {
-                description: "fff",
-                title: "Animation Blender",
-                video: "",
-                video2: "",
-                src: "",
-            },
-            {
                 description: "hhhhhh",
                 title: "Dessins de personnages Fleurs",
                 src: "assets/images/projets/doctolib.png",
                 src2: "assets/images/projets/logo_doctolib.png",
                 PDF:"",
             },
-            {
-                description: "bhbb",
-                title: "hhhhhhh",
-                src: "assets/images/projets/Interpeler.png",
-                src2: "assets/images/projets/Interpeler2.png",
-                src3: "assets/images/projets/Interpeler3.png",
-            },
-            {
-                description: "bhbb",
-                title: "hhhhhhh",
-                src: "assets/images/projets/elmet_terre.png",
-                src2: "assets/images/projets/affiche_Elmet.png",
-                src3: "assets/images/projets/elmet_page.png"
-            },
-            {
-                description: "njhhjhh",
-                title: "Hmmmmmmmmmmmmmmmmmm",
-                src: "assets/images/projets/maquetage_chaise.jpg",
-                src2: "assets/images/projets/chaise_noir.jpg",
-                src3: "assets/images/projets/chaise_analyse.jpg",
-            }
+            // {
+            //     description: "bhbb",
+            //     title: "hhhhhhh",
+            //     src: "assets/images/projets/Interpeler.png",
+            //     src2: "assets/images/projets/Interpeler2.png",
+            //     src3: "assets/images/projets/Interpeler3.png",
+            // },
+            // {
+            //     description: "bhbb",
+            //     title: "hhhhhhh",
+            //     src: "assets/images/projets/elmet_terre.png",
+            //     src2: "assets/images/projets/affiche_Elmet.png",
+            //     src3: "assets/images/projets/elmet_page.png"
+            // },
+            // {
+            //     description: "njhhjhh",
+            //     title: "Hmmmmmmmmmmmmmmmmmm",
+            //     src: "assets/images/projets/maquetage_chaise.jpg",
+            //     src2: "assets/images/projets/chaise_noir.jpg",
+            //     src3: "assets/images/projets/chaise_analyse.jpg",
+            // }
         ];
     
         const carousel = document.getElementById("carousel");
@@ -312,24 +376,35 @@
             
             const title = document.createElement("h3");
             title.textContent = item.title;
+            title.style.wordBreak = "break-word";  // Coupe les mots longs
+            title.style.overflowWrap = "break-word"; // Alternative pour assurer le retour à la ligne
+            title.style.whiteSpace = "normal"; // Empêche le texte de rester sur une seule ligne
         
             
             const description = document.createElement("p");
-            description.textContent = item.description;
-    
-            
-            const divText = document.createElement("div")
+            description.innerHTML = item.description;
+            description.style.wordBreak = "break-word";  // Coupe les mots longs
+            description.style.overflowWrap = "break-word"; // Alternative pour assurer le retour à la ligne
+            description.style.whiteSpace = "normal"; // Empêche le texte de rester sur une seule ligne
+            const divText = document.createElement("div");
+            divText.style.display ="flex"
+            divText.style.flexWrap = "wrap";
+            divText.style.width = "100%";
             card.appendChild(divText);
             divText.appendChild(title);
             divText.appendChild(description);
     
+            
+    
             const img = document.createElement("img");
+            img.className = "carousel-img";
             img.src = item.src;
             img.alt = item.title;
             card.appendChild(img);
     
             if (item.src2) { // Vérifie si src2 existe et n'est pas vide
                 const img2 = document.createElement("img");
+                img2.className = "carousel-img";
                 img2.src = item.src2;
                 img2.alt = item.title;
                 card.appendChild(img2);
@@ -337,6 +412,7 @@
     
             if (item.src3) { 
                 const img3 = document.createElement("img");
+                img3.className = "carousel-img";
                 img3.src = item.src3;
                 img3.alt = item.title;
                 card.appendChild(img3);
@@ -418,6 +494,32 @@
         carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".carousel-img").forEach(img => {
+        img.addEventListener("click", () => {
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+        });
+    });
+
+    // Fermeture de la lightbox
+    closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+
+    // Fermeture en cliquant en dehors de l'image
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+    });
+});
+
 
     
     </script>
