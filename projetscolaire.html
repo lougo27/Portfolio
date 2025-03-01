@@ -289,7 +289,7 @@
     </div>
     
     
-       <img src="assets/images/projets/.png" alt=""> 
+       <img src="assets/images/" alt=""> 
     <script>
         const data = [
             {
@@ -313,11 +313,18 @@
                 video: "assets/images/projets/anim_blender.mp4",
             },
             {
-                description: "fff",
+                description: "En cours, nous avons également découvert Hype, un logiciel permettant de créer des animations de manière intuitive et efficace. <br><br>Pour l’explorer, j’ai réalisé deux courtes animations : une bannière animée et une animation de logo.",
                 title: "Hype",
-                video: "",
-                video2: "",
+                video: "assets/images/projets/Logo_anime.mp4",
+                video2: "assets/images/baniere.mp4",
                 src: "",
+            },
+            {
+                description: "hhhhhh",
+                title: "Le Monde de Sharky",
+                src: "assets/images/projets/doctolib.png",
+                src2: "assets/images/projets/logo_doctolib.png",
+                PDF:"",
             },
             {
                 description: "BLALPAOAO",
@@ -396,11 +403,13 @@
     
             
     
-            const img = document.createElement("img");
-            img.className = "carousel-img";
-            img.src = item.src;
-            img.alt = item.title;
-            card.appendChild(img);
+            if (item.src) { // Vérifie si src2 existe et n'est pas vide
+                const img = document.createElement("img");
+                img.className = "carousel-img";
+                img.src = item.src;
+                img.alt = item.title;
+                card.appendChild(img);
+            }
     
             if (item.src2) { // Vérifie si src2 existe et n'est pas vide
                 const img2 = document.createElement("img");
@@ -434,6 +443,24 @@
                 card.appendChild(videoContainer);
     
             }
+
+            if (item.video2) {
+                const video2Container = document.createElement("div");
+                video2Container.className = "video-container";
+    
+                const video2 = document.createElement("video");
+                video2.src = item.video2
+                video2.controls = true; // Ajoute les contrôles (play, pause, volume...)
+                video2.autoplay = true; // Démarre automatiquement
+                video2.muted = true; // Obligatoire pour que l'autoplay fonctionne
+                video2.loop = true; // Répète la vidéo en boucle
+                video2.style.width = "100%"
+    
+                video2Container.appendChild(video2);
+                card.appendChild(video2Container);
+    
+            }
+    
     
             if (item.button) {
                 const button = document.createElement("button");
