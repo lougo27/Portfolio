@@ -198,7 +198,22 @@
             cursor: pointer;
         }
 
-
+        .boutons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            margin: auto;
+            background-color: #CA6702;
+            color: #EFE8D4;
+            border-radius: 20px;
+            border: none;
+            width: 10rem;
+            height: 10rem;
+            padding: 0.5rem 0;
+            font-size: 1rem;
+        }
 
     </style>
     <div id="Menu">
@@ -276,7 +291,7 @@
 
 
 
-   <img src="assets/images/projets/" alt=""> 
+   <img src="assets/images/projets/bubble_video.MOV" alt=""> 
 <script>
     const data = [
         {
@@ -284,21 +299,25 @@
             title: "The Maze Game",
             src: "assets/images/projets/maze.png",
             src2: "assets/images/projets/TheMazeImage.png",
+            src3: "assets/images/projets/soundtrapMaze.png",
             button: "https://lougo27.github.io/TheMaze/",
         },
         {
-            description: "BLALPAOAO",
+            description: "En jouant au memory avec ma famille, j’ai été tout de suite intriguée par son fonctionnement. Très vite, une question m’est venue : comment pourrais-je coder un jeu comme celui-ci ? <br><br>Curieuse d’explorer cette idée, j’ai rassemblé des photos de ma galerie et créé différentes catégories pour donner vie à ma propre version : une galerie photo façon Memory !",
             title: "Galerie Photos - Memory",
             src: "assets/images/projets/galeriePhotos2.png",
             src2: "assets/images/projets/galeriePhotos.png",
+            button: "https://lougo27.github.io/Memory-Galerie-photo/"
         },
         {
-            description: "bfghhhh",
+            description: "C’était mon tout premier projet en code que j'ai fait lorsque j'était encore au lycée ! J’ai donc commencé avec la librairie P5.js avant de passer sur Visual Studio Code. <br><br>Passionnée par les petits jeux vidéo, j’ai voulu en créer un. J’ai d’abord imaginé Bubble, un personnage au design épuré avec des yeux qui louchent (je voulais reprendre le tout premier personnage que j'avais coder même si j'avais fait une erreur dans la création de ses yeux). De là, l’idée m’est venue de concevoir quatre petits jeux, un pour chaque saison. <br><br>Le premier Bubble Game en hivers consiste à faire slalomer Bubble entre des cailloux lors de sa descente en ski… et plus ça va, plus ça s’accélère ! ⛷️ <br><br>Ci-dessous, la maquette réalisée en début de projet.",
             title: "Bubble Game",
             src: "assets/images/vignettes/bubble-100.jpg",
+            src2: "assets/images/projets/mockup_bubble.jpg",
+            video:"assets/images/projets/bubble_video.MOV",
         },
         {
-            description: "hhhhhh",
+            description: "Pendant mon temps libre, j’aime imaginer et dessiner de petits personnages, comme ma collection de fleurs illustrées que j’ai réalisée.",
             title: "Dessins de personnages Fleurs",
             src: "assets/images/projets/fleur_transate.jpg",
             src2: "assets/images/projets/fleur_rose.jpg",
@@ -373,6 +392,7 @@
 
         if (item.src3) { 
             const img3 = document.createElement("img");
+            img3.className = "carousel-img";
             img3.src = item.src3;
             img3.alt = item.title;
             card.appendChild(img3);
@@ -398,6 +418,7 @@
         if (item.button) {
             const button = document.createElement("button");
             button.innerText = "Voir le projet"
+            button.className = "boutons"
             button.addEventListener("click", () => {
                 window.open(item.button, "_blank"); // Ouvre dans un nouvel onglet
             });
