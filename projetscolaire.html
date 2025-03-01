@@ -205,8 +205,8 @@
             color: #EFE8D4;
             border-radius: 20px;
             border: none;
-            width: 10rem;
-            height: 10rem;
+            width: 8rem;
+            height: 2rem;
             padding: 0.5rem 0;
             font-size: 1rem;
         }
@@ -289,7 +289,7 @@
     </div>
     
     
-       <img src="assets/images/" alt=""> 
+       <img src="assets/images/projets/ecran_sharky.mov" alt=""> 
     <script>
         const data = [
             {
@@ -317,24 +317,24 @@
                 title: "Hype",
                 video: "assets/images/projets/Logo_anime.mp4",
                 video2: "assets/images/baniere.mp4",
-                src: "",
             },
             {
-                description: "hhhhhh",
+                description: "Pour notre projet de synthèse de fin de semestre à Gobelins Paris, nous avons créé, en équipe de trois, un site interactif fonctionnant comme un jeu à choix, visant à sensibiliser les jeunes aux addictions aux réseaux sociaux et à l’isolement social qu’elles peuvent engendrer. <br><br>Dans ce projet, j’ai réalisé la vidéo en motion design sur After Effects, que j’ai appris en autodidacte, ainsi que certains graphismes.",
                 title: "Le Monde de Sharky",
-                src: "assets/images/projets/doctolib.png",
-                src2: "assets/images/projets/logo_doctolib.png",
-                PDF:"",
+                video: "assets/images/projets/Teaser_Sharky_1.mp4",
+                video2: "assets/images/projets/ecran_sharky.mov",
+                button: "https://indd.adobe.com/view/219708d3-0c4f-404c-af5d-4cca741c6cf0",
+                
             },
             {
-                description: "BLALPAOAO",
-                title: "Galerie Photos - Memory",
+                description: "Pour m’exercer sur Illustrator et valider mes compétences, j’ai réalisé cette petite illustration en m’inspirant d’un modèle. <br><br>Elle a ensuite été imprimée sous forme de cartes postales !",
+                title: "Illustration de montre",
                 src: "assets/images/projets/Montre_LouaneGouin-100.jpg",
-                src2: "assets/images/projets/montre_modele.png",
+                //src2: "assets/images/projets/montre_modele.png",
             },
             {
-                description: "hhhhhh",
-                title: "Dessins de personnages Fleurs",
+                description: "Dans le cadre d’un dernier projet en STD2A, j’ai choisi de me pencher sur le domaine de l’UX/UI design en revisitant le site Doctolib. L’objectif était de l’adapter aux personnes âgées et à celles en situation d’illectronisme, afin de favoriser l’inclusivité. <br><br>N’ayant pas encore suivi de cours en UX/UI design à ce moment-là, j’ai dû faire mes propres recherches pour imaginer le site et l’expérience utilisateur. <br><br>Je vous invite à découvrir ma phase exploratoire pour en savoir plus sur le projet !",
+                title: "Revisiter le site Doctolib pour les personnes âgées",
                 src: "assets/images/projets/doctolib.png",
                 src2: "assets/images/projets/logo_doctolib.png",
                 PDF:"",
@@ -464,6 +464,7 @@
     
             if (item.button) {
                 const button = document.createElement("button");
+                button.className = "boutons"
                 button.innerText = "Voir le projet"
                 button.addEventListener("click", () => {
                     window.open(item.button, "_blank"); // Ouvre dans un nouvel onglet
