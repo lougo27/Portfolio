@@ -213,6 +213,10 @@ for (let i = 0; i < photoProjet.length; i++) {
             videoSource.src = firstMedia.path;
             videoEl.load();
             videoEl.style.display = "block";
+            videoEl.controls = true; // Ajoute les contrôles (play, pause, volume...)
+            videoEl.autoplay = true; // Démarre automatiquement
+            videoEl.muted = true; // Obligatoire pour que l'autoplay fonctionne
+            videoEl.loop = true;
         }
     }
 };
