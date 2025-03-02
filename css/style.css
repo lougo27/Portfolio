@@ -260,38 +260,59 @@ footer {
   color: white;
 }
 
-.grid {
+/* .grid {
   background-color: #c727274f;
   display: grid;
-  grid-template-columns: repeat(3, 2fr);
+  grid-template-columns: repeat(auto-fill, minmax(2 1fr)); /* Colonnes flexibles 
   grid-gap: 10px;
   grid-auto-rows: minmax(auto, auto);
 }
-.grid > div {
+
+/* .grid > div {
   background-color: rgba(0, 255, 255, 0.5);
-}
+} 
 
 #one {
-  grid-column: 1 / 4;
-  grid-row: 1;
+  grid-column: span 3; /* Occupation de toute la largeur pour l'élément principal 
 }
-.two {
-  grid-column: 1;
-  grid-row: 2;
-}
-.three {
-  grid-column: 2;
-  grid-row: 2;
-}
-.four {
-  grid-column: 3;
-  grid-row: 2;
+
+#image1 {
+  /* Les éléments secondaires sont automatiquement organisés selon l'espace disponible 
+  display: block;
 }
 
 .grid > div > img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: block; /* Assure que l'image ne dépasse pas son conteneur 
+} */
+
+.modal-body {
   display: flex;
+  gap: 20px;
+  align-items: flex-start; /* Aligner en haut pour éviter les espaces inutiles */
+}
+
+.description {
+  flex: 1;
+  max-width: 50%;
+}
+
+.media-container {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  align-items: stretch; /* Étire l’image/vidéo pour qu’elle prenne toute la hauteur */
+  justify-content: center;
+}
+
+.media-container img,
+.media-container video {
+  height: 100%; /* Prend toute la hauteur disponible */
+  max-height: 60vh;
+  width: auto; /* Pour garder les proportions */
+  max-width: 100%; /* Empêche de dépasser */
+  object-fit: contain; /* Ajuste le contenu sans déformation */
 }
 
 
