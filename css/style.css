@@ -290,11 +290,12 @@ footer {
 .modal-body {
   display: flex;
   gap: 20px;
-  align-items: flex-start; /* Aligner en haut pour éviter les espaces inutiles */
+  align-items: center; /* Aligner en haut pour éviter les espaces inutiles */
 }
 
 .description {
   flex: 1;
+  font-size: 1.1rem;
   max-width: 50%;
 }
 
@@ -302,13 +303,16 @@ footer {
   flex: 1;
   max-width: 50%;
   display: flex;
-  align-items: stretch; /* Étire l’image/vidéo pour qu’elle prenne toute la hauteur */
+  text-align: center;
+  align-items: center; /* Étire l’image/vidéo pour qu’elle prenne toute la hauteur */
   justify-content: center;
 }
 
 .media-container img,
 .media-container video {
   height: 100%; /* Prend toute la hauteur disponible */
+  align-items: center;
+  text-align: center;
   max-height: 60vh;
   width: auto; /* Pour garder les proportions */
   max-width: 100%; /* Empêche de dépasser */
