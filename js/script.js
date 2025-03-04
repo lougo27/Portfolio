@@ -42,6 +42,7 @@ let photoProjet = [
     conclusion: 'Allez voir dans les projets scolaires !',
     description: "En décembre, j’ai eu la chance d’effectuer un stage de deux semaines chez Sisméo Paris, où j’ai travaillé sur un projet interne touchant à plusieurs domaines. <br><br>J’ai d’abord exploré le graphisme, en créant un logo sur Illustrator et des mockups sur Photoshop. Ensuite, je me suis plongée dans l’UX/UI design, en concevant la maquette du site sur Figma. Enfin, j’ai mis en pratique mes compétences en développement web en réalisant le site et son adaptation responsive sur WordPress avec Elementor.",
     medias: [
+      { type: "img", path: "assets/images/vignettes/happy-100.jpg" },
       { type: "video", path: "assets/images/projets/naviguation-site_happy.mp4" },
     ]
   },
@@ -131,6 +132,7 @@ let photoProjet = [
     conclusion: 'Allez voir dans les projets scolaires !',
     description: "En décembre, j’ai eu la chance d’effectuer un stage de deux semaines chez Sisméo Paris, où j’ai travaillé sur un projet interne touchant à plusieurs domaines. <br><br>J’ai d’abord exploré le graphisme, en créant un logo sur Illustrator et des mockups sur Photoshop. Ensuite, je me suis plongée dans l’UX/UI design, en concevant la maquette du site sur Figma. Enfin, j’ai mis en pratique mes compétences en développement web en réalisant le site et son adaptation responsive sur WordPress avec Elementor.",
     medias: [
+      { type: "img", path: "assets/images/vignettes/happy-100.jpg" },
       { type: "video", path: "assets/images/projets/naviguation-site_happy.mp4" },
     ]
   },
