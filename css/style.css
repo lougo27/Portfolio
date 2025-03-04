@@ -7,6 +7,9 @@
   /* --offsetY: 25vw; */
 }
 
+#fauxTexte {
+  text-align: center;
+}
 
 body {
   background-color: #EFE8D4;
